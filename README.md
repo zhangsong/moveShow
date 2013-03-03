@@ -1,0 +1,4 @@
+moveShow
+========
+
+show move resources
