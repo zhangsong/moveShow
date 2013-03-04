@@ -1,7 +1,7 @@
 <?php
 $player_site_path = '/lib/f4player/';
 $move_site_path = '/move/';
-$move_file = '2.flv';
+$move_file = '3.mp4';
 ?>
 <html>
 <head>
