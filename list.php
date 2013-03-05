@@ -19,7 +19,7 @@ echo __FILE__;
 <?php 
 foreach ($files as $file) {
 ?>
-	<li><?php echo $file;?></li>
+	<li><a href="/index.php?mf=<?php echo urlencode(basename($file));?>"><?php echo $file;?></a></li>
 <?php
 }
 ?>

@@ -6,8 +6,6 @@ $move_file = '3.mp4';
 if ($_GET['mf']){
     $move_file = $_GET['mf'];
 }
-
-
 ?>
 <html>
 <head>
@@ -54,5 +52,5 @@ if ($_GET['mf']){
 <?php
 
 
-//phpinfo();
+phpinfo();
 ?>
