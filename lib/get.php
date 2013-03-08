@@ -15,13 +15,32 @@ class get
      **/
     public function fetch($url)
     {
+		global $lib_path;
         //create dir
         $dir = 'D:\code\moveshow/move/1362578399';
         $res = array();
         $res['cate']= array('name'=>'she', 'path'=>$dir);
         $res['list'] = array();
-        $r = array('name'=>'jj', 'url'=>'dd');
-        $res['list'][] = $r;
+        //$r = array('name'=>'jj', 'url'=>'dd');
+        //$res['list'][] = $r;
+		
+		require_once($lib_path . '/simple_html_dom.php');
+		$dom = new simple_html_dom();
+		$dom->load_file('http://v.163.com/special/opencourse/discoverpsychology.html');
+		
+		//$items = $dom->find('.m-clist tr');
+		$items = $dom->find('#list2 tr');
+		foreach ($items as $key=>$item) {
+			if ($key>0) {
+				$title = $item->find('.u-ctitle', 0);
+				$down = $item->find('.u-cdown a', 0);
+				$r['name'] = preg_replace('/\s/', '', trim($title->plaintext));
+				$r['url'] = $down->href;
+				$res['list'][] = $r;
+			}
+		}
+		//var_dump($res);	
+		return $res;
         $this->record($res);
         //record info
     }
