@@ -1,7 +1,7 @@
 <?php
 $player_site_path = '/lib/f4player/';
 $move_site_path = '/move/';
-$move_file = '2.flv';
+$move_file = '2.f4v';
 ?>
 <html>
 <head>
@@ -39,11 +39,12 @@ $move_file = '2.flv';
 		 <!-- [endif] --> 
 		</object>
 	</div>
+	可以播放.fly、.f4v和.mp4等文件。
 </body>
 </html>
 
 <?php
 
 
-phpinfo();
+//phpinfo();
 ?>
