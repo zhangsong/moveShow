@@ -3,3 +3,6 @@ protected/runtime/
 themes/classic/views/
 
 move/
+test/
+
+*.php~

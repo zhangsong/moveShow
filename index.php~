@@ -43,18 +43,14 @@ if ($_GET['mf']){
 		 <!-- [endif] --> 
 		</object>
 	</div>
-
-	可以播放.fly、.f4v和.mp4等文件。
-
 	<div>
 <a href="/list.php">我的视频</a>
 </div>
-
 </body>
 </html>
 
 <?php
 
 
-//phpinfo();
+phpinfo();
 ?>
