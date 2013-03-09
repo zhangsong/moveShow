@@ -4,5 +4,6 @@ themes/classic/views/
 
 move/
 test/
+fetch/
 
 *.php~

@@ -14,12 +14,12 @@ if ($_GET['mf']){
 </head>
 <body>
     <div id="player">
-		<object width="620" height="360" id="f4Player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"> 
-		<param name="movie" value="<?php echo $player_site_path;?>player.swf" /> 
-		<param name="quality" value="high" /> 
-		<param name="menu" value="false" /> 
-		<param name="allowFullScreen" value="true" /> 
-		<param name="scale" value="noscale" /> 
+		<object width="620" height="360" id="f4Player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+		<param name="movie" value="<?php echo $player_site_path;?>player.swf" />
+		<param name="quality" value="high" />
+		<param name="menu" value="false" />
+		<param name="allowFullScreen" value="true" />
+		<param name="scale" value="noscale" />
 		<param name="allowScriptAccess" value="always" />
 		<param name="swLiveConnect" value="true" />
 		<param name="flashVars" value="skin=<?php echo $player_site_path;?>skins/mySkin.swf
@@ -28,9 +28,9 @@ if ($_GET['mf']){
 			"/>
 		<!-- [if !IE] -->
 		<object width="620" height="360" data="<?php echo $player_site_path;?>player.swf" type="application/x-shockwave-flash" id="f4Player">
-		<param name="quality" value="high" /> 
-		<param name="menu" value="false" /> 
-		<param name="allowFullScreen" value="true" /> 
+		<param name="quality" value="high" />
+		<param name="menu" value="false" />
+		<param name="allowFullScreen" value="true" />
 		<param name="scale" value="noscale" />
 		<param name="allowScriptAccess" value="always" />
 		<param name="swLiveConnect" value="true" />
@@ -39,8 +39,8 @@ if ($_GET['mf']){
 			&video=<?php echo $move_site_path . $move_file; ?>
 			&autoplay=1
 			"/>
-		</object> 
-		 <!-- [endif] --> 
+		</object>
+		 <!-- [endif] -->
 		</object>
 	</div>
 
@@ -48,6 +48,8 @@ if ($_GET['mf']){
 
 	<div>
 <a href="/list.php">我的视频</a>
+<a href="/fetch.php">我要抓取</a>
+<a href="/fetchlist.php">我的抓取列表</a>
 </div>
 
 </body>
