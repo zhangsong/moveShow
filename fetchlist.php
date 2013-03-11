@@ -12,9 +12,10 @@ require_once('./define.inc.php');
 //文件操作类
 require_once($lib_path . '/yii/CFileHelper.php');
 require_once($lib_path . '/yii/mimeTypes.php');
+include($app_path . '/header.html');
 
 $handle = opendir($app_path . '/fetch');
-
+echo '<div class="container">';
 while (($file = readdir($handle))!==false){
     if ($file=='.' || $file === '..')
         continue;
@@ -42,15 +43,10 @@ while (($file = readdir($handle))!==false){
     echo '</ul>';
 
 }
-
 //读取列表
 ?>
-<html>
-<body>
-抓取列表：
-<ul>
-<li>dd</li>
 
-</ul>
-</body>
-</html>
+</div>
+<?php
+include($app_path . '/footer.html');
+?>

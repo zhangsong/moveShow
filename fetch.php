@@ -9,7 +9,7 @@
  */
 
 require_once('./define.inc.php');
-
+include($app_path . '/header.html');
 if ($_POST && !empty($_POST['furl'])) {
     require_once($lib_path . '/get.php');
     $get = new get();
@@ -21,9 +21,7 @@ if ($_POST && !empty($_POST['furl'])) {
     }
 } else {
 ?>
-<html>
-
-<body>
+<div class="container">
 <form method="post" action="/<?php echo basename(__FILE__);?>">
 <label>
 抓取地址：
@@ -31,9 +29,8 @@ if ($_POST && !empty($_POST['furl'])) {
 <input type="submit" value="抓取" />
 </label>
 </form>
-</body>
-</html>
+</div>
 <?php
-    echo 'page';
+    include($app_path . '/footer.html');
 }
 ?>

@@ -1,22 +1,21 @@
 <?php
 require_once('./define.inc.php');
 
-//ÎÄ¼þ²Ù×÷Àà
+//æ–‡ä»¶æ“ä½œç±»
 require_once($lib_path . '/yii/CFileHelper.php');
 require_once($lib_path . '/yii/mimeTypes.php');
 
 
 //$fileHelper = new CFileHelper();
 $files = CFileHelper::findFiles($move_path);
-var_dump($files);
-echo __FILE__;
+//var_dump($files);
+//echo __FILE__;
+include($app_path . '/header.html');
 ?>
-<html>
-
-<body>
-Ä¿Â¼ÎÄ¼þ
+<div class="container">
+ç›®å½•æ–‡ä»¶
 <ul>
-<?php 
+<?php
 foreach ($files as $file) {
 ?>
 	<li><a href="/index.php?mf=<?php echo urlencode(basename($file));?>"><?php echo $file;?></a></li>
@@ -27,8 +26,7 @@ foreach ($files as $file) {
 
 
 </ul>
-
-</body>
-
-
-</html>
+</div>
+<?php
+include($app_path . '/footer.html');
+?>

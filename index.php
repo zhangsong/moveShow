@@ -6,13 +6,10 @@ $move_file = '3.mp4';
 if ($_GET['mf']){
     $move_file = $_GET['mf'];
 }
+
+include($app_path . '/header.html')
 ?>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>f4Player :: beta</title>
-</head>
-<body>
+<div class="container">
     <div id="player">
 		<object width="620" height="360" id="f4Player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
 		<param name="movie" value="<?php echo $player_site_path;?>player.swf" />
@@ -37,7 +34,6 @@ if ($_GET['mf']){
 		<param name="flashVars" value="skin=<?php echo $player_site_path;?>skins/mySkin.swf
 			&thumbnail=<?php echo $player_site_path;?>video-thumbnail.jpg
 			&video=<?php echo $move_site_path . $move_file; ?>
-			&autoplay=1
 			"/>
 		</object>
 		 <!-- [endif] -->
@@ -51,12 +47,11 @@ if ($_GET['mf']){
 <a href="/fetch.php">我要抓取</a>
 <a href="/fetchlist.php">我的抓取列表</a>
 </div>
+</div>
 
-</body>
-</html>
 
 <?php
-
+include($app_path . '/footer.html');
 
 //phpinfo();
 ?>
