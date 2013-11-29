@@ -31,7 +31,10 @@ while (($file = readdir($handle))!==false){
             $info = unserialize($json);
             if ($info) {
                 foreach ($info['list'] as $list) {
-                    echo '<li>' . $list['name'] . '</li>';
+					$finfo = pathinfo($list['url']);
+					$status = file_exists($app_path . '/fetch/' . $file . '/' . $finfo['basename']) ? '已下载' : '未下载';
+					
+                    echo '<li>' . $list['name'] . '<span style="margin-left:20px;">' . $status . '</span></li>';
 
                 }
             }

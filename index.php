@@ -2,7 +2,7 @@
 require_once('./define.inc.php');
 //$player_site_path = '/lib/f4player/';
 //$move_site_path = '/move/';
-$move_file = '3.mp4';
+$move_file = '1_0.flv';
 if ($_GET['mf']){
     $move_file = $_GET['mf'];
 }
